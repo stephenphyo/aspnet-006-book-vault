@@ -24,7 +24,7 @@ namespace ASPNET_006_Book_Vault.Migrations
                     Rating = table.Column<float>(type: "real", nullable: false),
                     CoverUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

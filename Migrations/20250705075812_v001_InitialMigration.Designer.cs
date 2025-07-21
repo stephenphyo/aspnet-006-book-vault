@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNET_006_Book_Vault.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250629113406_v001_InitialMigration")]
+    [Migration("20250705075812_v001_InitialMigration")]
     partial class v001_InitialMigration
     {
         /// <inheritdoc />
@@ -52,15 +52,15 @@ namespace ASPNET_006_Book_Vault.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<float>("Rating")
                         .HasColumnType("real");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
